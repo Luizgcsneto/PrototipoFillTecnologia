@@ -1,11 +1,6 @@
 ﻿using Api.Entities.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infra.Configuration
 {
@@ -22,6 +17,21 @@ namespace Infra.Configuration
 
             base.OnModelCreating(builder);
         }
+
+        public string ObterStringConexao()
+        {
+            return "Server=.\\SQLEXPRESS;Database=FILLDB;Integrated Security=SSPI;TrustServerCertificate=True";
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(ObterStringConexao());
+                base.OnConfiguring(optionsBuilder);
+            }
+        }
+
 
     }
 }
