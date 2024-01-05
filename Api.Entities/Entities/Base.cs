@@ -4,9 +4,17 @@ namespace Api.Entities.Entities
 {
     public class Base
     {
+        [Key]
         [Display(Name = "Código")]
         public int Id { get; set; }
-        [Display(Name = "Nome")]
-        public string Name { get; set; }
+
+        private DateTime? _createAt;
+        public DateTime? CreateAt
+        {
+            get { return _createAt; }
+            set { _createAt = (value == null ? DateTime.UtcNow : value); }
+        }
+
+        public DateTime? UpdateAt { get; set; }
     }
 }
