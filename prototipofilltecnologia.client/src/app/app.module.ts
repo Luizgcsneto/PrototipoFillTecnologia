@@ -12,8 +12,6 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    SidebarComponent,
     ImobileComponent,
     AddressComponent,
     DashboardComponent
