@@ -22,11 +22,10 @@ namespace PrototipoFillTecnologia.Server.Controllers
             _signInManager = signInManager;
         }
 
-
         [AllowAnonymous]
         [Produces("application/json")]
-        [HttpPost("api/AdicionarUsuario")]
-        public async Task<IActionResult> AdicionarUsuario([FromBody] Login input)
+        [HttpPost("api/CreateUser")]
+        public async Task<IActionResult> CreateUser([FromBody] Login input)
         {
             if (string.IsNullOrWhiteSpace(input.Email) ||
                string.IsNullOrWhiteSpace(input.Password) ||
