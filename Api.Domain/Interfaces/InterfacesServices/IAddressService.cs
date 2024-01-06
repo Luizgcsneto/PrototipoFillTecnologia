@@ -9,7 +9,7 @@ namespace Api.Domain.Interfaces.InterfacesServices
 {
     public interface IAddressService
     {
-        Task<AddressEntity> AddAddress(AddressEntity address);
-        Task<AddressEntity> UpdateAddress(AddressEntity address);
+        Task AddAddress(AddressEntity address);
+        Task UpdateAddress(AddressEntity address);
     }
 }

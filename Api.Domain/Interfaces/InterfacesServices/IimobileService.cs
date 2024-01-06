@@ -9,7 +9,7 @@ namespace Api.Domain.Interfaces.InterfacesServices
 {
     public interface IimobileService
     {
-        Task<ImobileEntity> AddImobile(ImobileEntity entity);
-        Task<ImobileEntity> UpdateImobile(ImobileEntity entity);
+        Task AddImobile(ImobileEntity entity);
+        Task UpdateImobile(ImobileEntity entity);
     }
 }
