@@ -8,8 +8,8 @@ namespace Infra.Configuration
     {
         public ContextBase(DbContextOptions options) : base(options) { }
 
-        public DbSet<Imobile> Imobile { get; set; }
-        public DbSet<Address> Address { get; set; }
+        public DbSet<ImobileEntity> Imobile { get; set; }
+        public DbSet<AddressEntity> Address { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

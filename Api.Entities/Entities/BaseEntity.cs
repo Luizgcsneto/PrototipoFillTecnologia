@@ -2,7 +2,7 @@
 
 namespace Api.Entities.Entities
 {
-    public class Base
+    public class BaseEntity
     {
         [Key]
         [Display(Name = "Código")]

@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Api.Entities.Entities
 {
     [Table("Imobile")]
-    public class Imobile : Base
+    public class ImobileEntity : BaseEntity
     {
         [Display(Name = "Titulo")]
         public string Title { get; set; }
@@ -18,7 +18,7 @@ namespace Api.Entities.Entities
         [Display(Name = "Valor")]
         public decimal Price { get; set; }
         [Display(Name = "Endereço")]
-        public Address Address { get; set; }
+        public AddressEntity Address { get; set; }
 
     }
 }

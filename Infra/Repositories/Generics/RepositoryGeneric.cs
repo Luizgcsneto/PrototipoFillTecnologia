@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infra.Repositories.Generics
 {
-    public class RepositoyGeneric<T> : InterfaceGeneric<T> where T : class
+    public class RepositoryGeneric<T> : InterfaceGeneric<T> where T : class
     {
         private readonly DbContextOptions<ContextBase> _optionsBuilder;
-        public RepositoyGeneric()
+        public RepositoryGeneric()
         {
             _optionsBuilder = new DbContextOptions<ContextBase>();
         }

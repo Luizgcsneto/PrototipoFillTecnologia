@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Api.Entities.Entities
 {
     [Table("Address")]
-    public class Address : Base
+    public class AddressEntity : BaseEntity
     {
         [Display(Name = "Rua")]
         public string Street { get; set; }
