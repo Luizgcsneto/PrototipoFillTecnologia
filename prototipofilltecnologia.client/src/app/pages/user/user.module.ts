@@ -1,17 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ImobileComponent } from './imobile.component';
-import { ImobileRoutingModule } from './imobile-routing.module';
-import { ReactiveFormsModule } from '@angular/forms';
 import { NavbarModule } from 'src/app/components/navbar/navbar.module';
 import { SidebarModule } from 'src/app/components/sidebar/sidebar.module';
+import { UserComponent } from './user.component';
+import { UserRoutingModule } from './user-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule(
   {
     providers: [],
-    declarations: [ImobileComponent],
+    declarations: [UserComponent],
     imports: [CommonModule,
-      ImobileRoutingModule,
+      UserRoutingModule,
       NavbarModule,
       SidebarModule,
       ReactiveFormsModule
@@ -19,4 +21,5 @@ import { SidebarModule } from 'src/app/components/sidebar/sidebar.module';
   }
 )
 
-export class ImobileModule {}
+
+export class UserModule {}

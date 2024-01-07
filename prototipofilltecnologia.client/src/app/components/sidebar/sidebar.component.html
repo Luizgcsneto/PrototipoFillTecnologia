@@ -27,4 +27,13 @@
     </div>
   </div>
 
+  <div class="grupo-menu">
+    <div class="container-icone-grupo">
+        <div class="caixa-menu caixa-menu-texto" (click)="selectMenu(4)"
+        [ngClass]="{'caixa-menu-select': this.menuService.menuSelecionado == 4, '':this.menuService.menuSelecionado != 4}">
+          Usuários
+        </div>
+    </div>
+  </div>
+
 </div>

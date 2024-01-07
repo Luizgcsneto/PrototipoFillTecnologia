@@ -1,9 +1,16 @@
+import { Address } from "./Address";
+
 export class Imobile  {
-  Id: number;
-  Title: string;
-  District: string;
-  NumberRooms: number;
-  BusinessType: number;
-  Price: number;
-  Address: Address;
+  id: number;
+  title: string;
+  district: string;
+  numberRooms: number;
+  businessType: number;
+  price: number;
+  address: Address;
+
+
+  constructor() {
+    this.address = new Address()
+  }
 }

@@ -24,20 +24,21 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'sistema',
-    loadChildren: () => import('./pages/sistema/sistema.module').then(m => m.SistemaModule),
+    path: 'imobile',
+    loadChildren: () => import('./pages/imobile/imobile.module').then(m => m.ImobileModule),
     canActivate: [AuthGuard]
   },
   {
-    path: 'categoria',
-    loadChildren: () => import('./pages/categoria/categoria.module').then(m => m.CategoriaModule),
+    path: 'address',
+    loadChildren: () => import('./pages/address/address.module').then(m => m.AddressModule),
     canActivate: [AuthGuard]
   },
   {
-    path: 'despesas',
-    loadChildren: () => import('./pages/despesas/despesa.module').then(m => m.DespesaModule),
+    path: 'user',
+    loadChildren: () => import('./pages/user/user.module').then(m => m.UserModule),
     canActivate: [AuthGuard]
   },
+
 ];
 
 @NgModule({

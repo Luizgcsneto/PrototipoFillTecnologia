@@ -5,7 +5,7 @@ import { MenuService } from 'src/app/services/menu.service';
 @Component({
   selector: 'sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss']
+  styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
 
@@ -26,6 +26,9 @@ export class SidebarComponent implements OnInit {
       break
       case 3:
         this.router.navigate(['/address'])
+      break
+      case 4:
+        this.router.navigate(['/user'])
       break
       default:
         break

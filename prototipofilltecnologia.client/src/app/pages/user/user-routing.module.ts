@@ -1,12 +1,11 @@
-import { AddressComponent } from './address.component';
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-
+import { UserComponent } from "./user.component";
 
 const routes: Routes =[
   {
     path: '',
-    component: AddressComponent,
+    component: UserComponent,
   }
 ]
 @NgModule({
@@ -15,4 +14,4 @@ const routes: Routes =[
 })
 
 
-export class AddressRoutingModule {}
+export class UserRoutingModule {}
