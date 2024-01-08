@@ -60,7 +60,6 @@ export class AddressComponent implements OnInit {
       (response: Address) =>{
         this.addressForm.reset()
         window.location.reload()
-        this.router.navigate(['/address'])
       }
     ),
     (error) => console.error(error), () => {}

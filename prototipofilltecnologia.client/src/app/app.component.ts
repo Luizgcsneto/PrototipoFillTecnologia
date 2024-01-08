@@ -14,5 +14,5 @@ export class AppComponent implements OnInit {
 
   }
 
-  title = 'prototipofilltecnologia.client';
+  title = 'Prototipo Front';
 }

@@ -58,7 +58,6 @@ export class ImobileComponent implements OnInit {
       (response: Imobile) =>{
         this.imobileForm.reset()
         window.location.reload()
-        this.router.navigate(['/imobile'])
       }
     ),
     (error) => console.error(error), () => {}
