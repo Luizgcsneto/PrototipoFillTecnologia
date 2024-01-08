@@ -6,5 +6,7 @@ namespace Api.Domain.Interfaces.InterfacesServices
     {
         Task AddImobile(ImobileEntity entity);
         Task UpdateImobile(ImobileEntity entity);
+        Task<List<ImobileEntity>> List();
+        Task<ImobileEntity> GetImobileById(int id);
     }
 }

@@ -1,35 +1,34 @@
 ﻿using Api.Domain.Interfaces.InterfacesServices;
+using Api.Domain.Services;
 using Api.Entities.Entities;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
 namespace PrototipoFillTecnologia.Server.Controllers
 {
-   
     [Route("api/[controller]")]
     [ApiController]
-    public class ImobilesController : ControllerBase
+    public class AddressController : ControllerBase
     {
-        private readonly IimobileService _IimobileService;
-        public ImobilesController(IimobileService iImobileService)
+        private readonly IAddressService _addressService;
+        public AddressController(IAddressService addressService)
         {
-            _IimobileService = iImobileService;
+            _addressService = addressService;
         }
 
         [Produces("application/json")]
-        [HttpPost("/api/CreateImobile")]
-        public async Task<IActionResult> CreateImobile([FromBody] ImobileEntity imobile)
+        [HttpPost("/api/CreateAddress")]
+        public async Task<IActionResult> CreateAddress([FromBody] AddressEntity address)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-           
+
             try
             {
-                await _IimobileService.AddImobile(imobile);
+                await _addressService.AddAddress(address);
                 return Ok();
             }
             catch (ArgumentException e)
@@ -39,8 +38,8 @@ namespace PrototipoFillTecnologia.Server.Controllers
         }
 
         [Produces("application/json")]
-        [HttpPut("/api/UpdateImobile")]
-        public async Task<IActionResult> UpdateImobile([FromBody] ImobileEntity imobile)
+        [HttpPut("/api/UpdateAddress")]
+        public async Task<IActionResult> UpdateAddress([FromBody] AddressEntity address)
         {
             if (!ModelState.IsValid)
             {
@@ -49,7 +48,7 @@ namespace PrototipoFillTecnologia.Server.Controllers
 
             try
             {
-                await _IimobileService.UpdateImobile(imobile);
+                await _addressService.UpdateAddress(address);
                 return Ok();
             }
             catch (ArgumentException e)
@@ -59,8 +58,8 @@ namespace PrototipoFillTecnologia.Server.Controllers
         }
 
         [Produces("application/json")]
-        [HttpGet("/api/GetAllImobiles")]
-        public async Task<IActionResult> GetAllImobiles()
+        [HttpGet("/api/GetAllAddress")]
+        public async Task<IActionResult> GetAllAddress()
         {
             if (!ModelState.IsValid)
             {
@@ -69,7 +68,7 @@ namespace PrototipoFillTecnologia.Server.Controllers
 
             try
             {
-                return Ok(await _IimobileService.List());
+                return Ok(await _addressService.List());
             }
             catch (ArgumentException e)
             {
@@ -77,9 +76,10 @@ namespace PrototipoFillTecnologia.Server.Controllers
             }
         }
 
+
         [Produces("application/json")]
-        [HttpGet("/api/GetImobileById")]
-        public async Task<IActionResult> GetImobileById(int id)
+        [HttpGet("/api/GetAddressById")]
+        public async Task<IActionResult> GetAddressById(int id)
         {
             if (!ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace PrototipoFillTecnologia.Server.Controllers
 
             try
             {
-                var result = await _IimobileService.GetImobileById(id);
+                var result = await _addressService.GetAddressById(id);
                 return Ok(result);
             }
             catch (ArgumentException e)
@@ -96,6 +96,5 @@ namespace PrototipoFillTecnologia.Server.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
-
     }
 }

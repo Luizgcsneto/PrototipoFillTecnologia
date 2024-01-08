@@ -6,5 +6,8 @@ namespace Api.Domain.Interfaces.InterfacesServices
     {
         Task AddAddress(AddressEntity address);
         Task UpdateAddress(AddressEntity address);
+        Task<List<AddressEntity>> List();
+        Task<AddressEntity> GetAddressById(int id);
+
     }
 }

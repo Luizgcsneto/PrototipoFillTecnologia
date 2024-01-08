@@ -1,8 +1,35 @@
 <navbar></navbar>
 <sidebar></sidebar>
 
+
+
 <div class="container-base">
+
+
   <div class="content-page">
+    <table  *ngIf="imobiles">
+      <tr>
+        <th>Título</th>
+        <th>Bairro</th>
+        <th>Número de dormitórios</th>
+        <th>Tipo de negócio</th>
+        <th>Valor</th>
+        <th>Opções</th>
+      </tr>
+
+      <tr *ngFor="let item of imobiles">
+        <td>{{item.title}}</td>
+        <td>{{item.district}}</td>
+        <td>{{item.numberRooms}}</td>
+        <td>{{item.businessType}}</td>
+        <td>{{item.price}}</td>
+        <td>
+          <!-- <button type="button" class="btn btn-sm btn-outline-info" (click)="ShowFormUpdate(item.id)">Atualizar</button> |
+          <button type="button" class="btn btn-sm btn-outline-danger" (click)="Delete(item.id)">Excluir</button> -->
+        </td>
+      </tr>
+    </table>
+
       <div class="card-header">
           <div class="card-title">
             Cadastro de Imóveis
@@ -95,17 +122,6 @@
                 </label>
             </div>
           </div>
-
-
-          <div class="row">
-            <div class="group-row">
-              <label for=""></label>
-
-               <!-- <ng-select class="select-padrao" bindLabel="name" formControlName="categoriaSelect" [(ngModel)]="categoriaSelect" [items]="listCategorias" [multiple]="false" [clearable]="false"
-               [searchable]="false"></ng-select> -->
-            </div>
-          </div>
-
 
 
             <div class="row">
