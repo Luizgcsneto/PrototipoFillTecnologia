@@ -53,14 +53,6 @@ export class ImobileComponent implements OnInit {
     item.district = dados['district'].value
     item.numberRooms = dados['numberRooms'].value
     item.businessType = dados['businessType'].value
-    item.address.id = 0
-    item.address.city = ""
-    item.address.state = ""
-    item.address.street = ""
-    item.address.country = ""
-    item.address.number = 0
-    item.address.neighborhood = ""
-
 
     this.imobileService.CreateImobile(item).subscribe(
       (response: Imobile) =>{
