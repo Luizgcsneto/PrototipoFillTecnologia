@@ -96,6 +96,5 @@ namespace PrototipoFillTecnologia.Server.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
-
     }
 }

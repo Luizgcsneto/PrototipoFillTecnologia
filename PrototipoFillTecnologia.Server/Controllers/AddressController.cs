@@ -76,7 +76,6 @@ namespace PrototipoFillTecnologia.Server.Controllers
             }
         }
 
-
         [Produces("application/json")]
         [HttpGet("/api/GetAddressById")]
         public async Task<IActionResult> GetAddressById(int id)

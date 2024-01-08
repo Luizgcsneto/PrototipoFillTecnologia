@@ -65,7 +65,6 @@ namespace PrototipoFillTecnologia.Server.Controllers
             {
                 return Ok("Erro ao cadastrar Usuário");
             }
-
         }
     }
 }
