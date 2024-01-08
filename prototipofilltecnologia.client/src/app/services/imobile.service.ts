@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Imobile } from '../models/Imobile';
+import { environment } from 'src/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class ImobileService {
 
   constructor(private httpClient : HttpClient) { }
 
-  private readonly baseUrl = 'https://localhost:7214/api'
+  private readonly baseUrl = environment['endpoint']
 
   CreateImobile(imobile : Imobile){
     return this.httpClient.post<Imobile>(`${this.baseUrl}/CreateImobile`,imobile)

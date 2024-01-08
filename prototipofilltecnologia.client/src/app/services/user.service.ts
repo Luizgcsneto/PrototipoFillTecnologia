@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../models/User';
+import { environment } from 'src/environment';
+environment
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +11,7 @@ export class UserService {
 
   constructor(private httpClient : HttpClient) { }
 
-  private readonly baseUrl = 'https://localhost:7214/api/Users/api'
+  private readonly baseUrl = environment['endpointUser']
 
   CreateUser(user: User)
   {
