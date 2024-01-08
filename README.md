@@ -26,3 +26,5 @@ Executar os comandos
 "Add-Migration NomeDaMigration"
 "Update-Database"
 
+Agora você deve ir no projeto angular e dar o comando npm i para baixar o node_modules.
+
