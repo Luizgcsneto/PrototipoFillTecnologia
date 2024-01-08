@@ -7,17 +7,52 @@ namespace Api.Entities.Entities
     public class AddressEntity : BaseEntity
     {
         [Display(Name = "Rua")]
-        public string Street { get; set; }
-        [Display(Name = "Rua")]
-        public int Number { get; set; }
+        private string _street;
+        public string Street
+        {
+            get { return _street; }
+            set { _street = value; }
+        }
+
+        [Display(Name = "Número")]
+        private int _number;
+        public int Number
+        {
+            get { return _number; }
+            set { _number = value; }
+        }
+
         [Display(Name = "Bairro")]
-        public string Neighborhood { get; set; }
+        private string _neighborhood;
+        public string Neighborhood
+        {
+            get { return _neighborhood; }
+            set { _neighborhood = value; }
+        }
+
         [Display(Name = "Cidade")]
-        public string City { get; set; }
+        private string _city;
+        public string City
+        {
+            get { return _city; }
+            set { _city = value; }
+        }
+
         [Display(Name = "Estado")]
-        public string State { get; set; }
+        private string _state;
+        public string State
+        {
+            get { return _state; }
+            set { _state = value; }
+        }
+
         [Display(Name = "Pais")]
-        public string Country { get; set; }
+        private string _country;
+        public string Country
+        {
+            get { return _country; }
+            set { _country = value; }
+        }
 
     }
 }

@@ -53,20 +53,20 @@ export class ImobileComponent implements OnInit {
     item.district = dados['district'].value
     item.numberRooms = dados['numberRooms'].value
     item.businessType = dados['businessType'].value
-    item.address.Id = 0
-    item.address.City = ""
-    item.address.State = ""
-    item.address.Street = ""
-    item.address.Country = ""
-    item.address.Number = 0
-    item.address.Neighborhood = ""
+    item.address.id = 0
+    item.address.city = ""
+    item.address.state = ""
+    item.address.street = ""
+    item.address.country = ""
+    item.address.number = 0
+    item.address.neighborhood = ""
 
 
     this.imobileService.CreateImobile(item).subscribe(
       (response: Imobile) =>{
         this.imobileForm.reset()
-        alert("Imóvel cadastrado com sucesso")
-        this.router.navigate(['/dashboard'])
+        window.location.reload()
+        this.router.navigate(['/imobile'])
       }
     ),
     (error) => console.error(error), () => {}

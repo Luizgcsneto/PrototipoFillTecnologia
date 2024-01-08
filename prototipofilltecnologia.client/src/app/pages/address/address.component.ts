@@ -24,21 +24,20 @@ export class AddressComponent implements OnInit {
 
     this.addressForm = this.formBuilder.group(
       {
-        Id: ['',[Validators.required]],
-        Street: ['',[Validators.required]],
-        Neighborhood: ['',[Validators.required]],
-        Number: ['',[Validators.required]],
-        City: ['',[Validators.required]],
-        State: ['',[Validators.required]],
-        Country: ['',[Validators.required]]
+        id: ['',[Validators.required]],
+        street: ['',[Validators.required]],
+        neighborhood: ['',[Validators.required]],
+        number: ['',[Validators.required]],
+        city: ['',[Validators.required]],
+        state: ['',[Validators.required]],
+        country: ['',[Validators.required]]
       })
 
-      this.addressService.GetAllAddress().subscribe(
-        response =>{
-          this.addressList = response
-        }
-      ),
-      (error) => console.error(error), () => {}
+      this.addressService.GetAllAddress().subscribe(response => {
+        this.addressList = response
+    }),
+    (error) => console.error(error), () => {}
+
   }
 
   dadosForm(){
@@ -49,19 +48,19 @@ export class AddressComponent implements OnInit {
 
     var dados = this.dadosForm()
     let item = new Address()
-    item.Id = 0
-    item.Street = dados['Street'].value
-    item.Neighborhood = dados['Neighborhood'].value
-    item.Number = dados['Number'].value
-    item.State = dados['State'].value
-    item.City = dados['City'].value
-    item.Country = dados['Country'].value
+    item.id = 0
+    item.street = dados['street'].value
+    item.neighborhood = dados['neighborhood'].value
+    item.number = dados['number'].value
+    item.state = dados['state'].value
+    item.city = dados['city'].value
+    item.country = dados['country'].value
 
     this.addressService.CreateAddress(item).subscribe(
       (response: Address) =>{
         this.addressForm.reset()
-        alert("Endereço cadastrado com sucesso")
-        this.router.navigate(['/dashboard'])
+        window.location.reload()
+        this.router.navigate(['/address'])
       }
     ),
     (error) => console.error(error), () => {}

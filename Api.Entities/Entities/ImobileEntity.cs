@@ -8,17 +8,43 @@ namespace Api.Entities.Entities
     public class ImobileEntity : BaseEntity
     {
         [Display(Name = "Titulo")]
-        public string Title { get; set; }
+        private string _title;
+        public string Title
+        {
+            get { return _title; }
+            set { _title = value; }
+        }
+
         [Display(Name = "Bairro")]
-        public string District { get; set; }
+        private string _district;
+        public string District
+        {
+            get { return _district; }
+            set { _district = value; }
+        }
+
         [Display(Name = "Quantidade de Quartos")]
-        public int NumberRooms { get; set; }
+        private int _numberRooms;
+        public int NumberRooms
+        {
+            get { return _numberRooms; }
+            set { _numberRooms = value; }
+        }
         [Display(Name = "Tipo de negócio")]
-        public BusinessType BusinessType { get; set; }
+        private BusinessType _businessType;
+        public BusinessType BusinessType
+        {
+            get { return _businessType; }
+            set { _businessType = value; }
+        }
+
         [Display(Name = "Valor")]
-        public decimal Price { get; set; }
-        [Display(Name = "Endereço")]
-        public AddressEntity Address { get; set; }
+        private decimal _price;
+        public decimal Price
+        {
+            get { return _price; }
+            set { _price = value; }
+        }
 
     }
 }

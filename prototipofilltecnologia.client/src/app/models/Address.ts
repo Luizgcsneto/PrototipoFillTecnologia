@@ -1,9 +1,9 @@
 export class Address {
-  Id: number;
-  Street: string;
-  Number: number;
-  Neighborhood: string;
-  City: string;
-  State: string;
-  Country: string;
+  id: number;
+  street: string;
+  number: number;
+  neighborhood: string;
+  city: string;
+  state: string;
+  country: string;
 }

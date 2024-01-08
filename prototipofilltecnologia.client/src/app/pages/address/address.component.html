@@ -14,12 +14,12 @@
             </tr>
 
             <tr *ngFor="let item of addressList">
-                <td>{{item.Street}}</td>
-                <td>{{item.Neighborhood}}</td>
-                <td>{{item.Number}}</td>
-                <td>{{item.City}}</td>
-                <td>{{item.State}}</td>
-                <td>{{item.Country}}</td>
+                <td>{{item.street}}</td>
+                <td>{{item.neighborhood}}</td>
+                <td>{{item.number}}</td>
+                <td>{{item.city}}</td>
+                <td>{{item.state}}</td>
+                <td>{{item.country}}</td>
             </tr>
         </table>
         <div class="card-header">
@@ -32,9 +32,9 @@
             <div class="row">
                 <div class="group-row">
                     <label for="">Rua:</label>
-                    <input type="text" name="Street" id="Street" placeholder="Informe o nome da rua:" formControlName="Street" required>
-                    <label class="error-input" *ngIf="this.addressForm.get('Street')?.errors?.['required'] &&
-                this.addressForm.get('Street')?.touched">
+                    <input type="text" name="street" id="street" placeholder="Informe o nome da rua:" formControlName="street" required>
+                    <label class="error-input" *ngIf="this.addressForm.get('street')?.errors?.['required'] &&
+                this.addressForm.get('street')?.touched">
                         Campo Obrigatório
                     </label>
                 </div>
@@ -43,9 +43,9 @@
             <div class="row">
                 <div class="group-row">
                     <label for="">Bairro:</label>
-                    <input type="text" name="Neighborhood" id="Neighborhood" placeholder="Informe o nome do bairro:" formControlName="Neighborhood" required>
-                    <label class="error-input" *ngIf="this.addressForm.get('Neighborhood')?.errors?.['required'] &&
-                this.addressForm.get('Neighborhood')?.touched">
+                    <input type="text" name="neighborhood" id="neighborhood" placeholder="Informe o nome do bairro:" formControlName="neighborhood" required>
+                    <label class="error-input" *ngIf="this.addressForm.get('neighborhood')?.errors?.['required'] &&
+                this.addressForm.get('neighborhood')?.touched">
                         Campo Obrigatório
                     </label>
                 </div>
@@ -54,9 +54,9 @@
             <div class="row">
                 <div class="group-row">
                     <label for="">Número:</label>
-                    <input type="number" name="Number" id="Number" placeholder="Informe o número:" formControlName="Number" required>
-                    <label class="error-input" *ngIf="this.addressForm.get('Number')?.errors?.['required'] &&
-                this.addressForm.get('Number')?.touched">
+                    <input type="number" name="number" id="number" placeholder="Informe o número:" formControlName="number" required>
+                    <label class="error-input" *ngIf="this.addressForm.get('number')?.errors?.['required'] &&
+                this.addressForm.get('number')?.touched">
                         Campo Obrigatório
                     </label>
                 </div>
@@ -65,9 +65,9 @@
             <div class="row">
                 <div class="group-row">
                     <label for="">Cidade:</label>
-                    <input type="text" name="City" id="City" placeholder="Informe a cidade:" formControlName="City" required>
-                    <label class="error-input" *ngIf="this.addressForm.get('City')?.errors?.['required'] &&
-                this.addressForm.get('City')?.touched">
+                    <input type="text" name="city" id="city" placeholder="Informe a cidade:" formControlName="city" required>
+                    <label class="error-input" *ngIf="this.addressForm.get('city')?.errors?.['required'] &&
+                this.addressForm.get('city')?.touched">
                         Campo Obrigatório
                     </label>
                 </div>
@@ -76,9 +76,9 @@
             <div class="row">
                 <div class="group-row">
                     <label for="">Estado</label>
-                    <input type="text" name="State" id="State" placeholder="Informe o Estado" formControlName="State" required>
-                    <label class="error-input" *ngIf="this.addressForm.get('State')?.errors?.['required'] &&
-                this.addressForm.get('State')?.touched">
+                    <input type="text" name="state" id="state" placeholder="Informe o Estado" formControlName="state" required>
+                    <label class="error-input" *ngIf="this.addressForm.get('state')?.errors?.['required'] &&
+                this.addressForm.get('state')?.touched">
                         Campo Obrigatório
                     </label>
                 </div>
@@ -87,9 +87,9 @@
             <div class="row">
                 <div class="group-row">
                     <label for="">País</label>
-                    <input type="text" name="Country" id="Country" placeholder="Informe o país" formControlName="Country" required>
-                    <label class="error-input" *ngIf="this.addressForm.get('Country')?.errors?.['required'] &&
-                this.addressForm.get('Country')?.touched">
+                    <input type="text" name="country" id="country" placeholder="Informe o país" formControlName="country" required>
+                    <label class="error-input" *ngIf="this.addressForm.get('country')?.errors?.['required'] &&
+                this.addressForm.get('country')?.touched">
                         Campo Obrigatório
                     </label>
                 </div>
