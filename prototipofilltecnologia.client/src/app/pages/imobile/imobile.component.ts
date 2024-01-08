@@ -14,6 +14,7 @@ export class ImobileComponent implements OnInit {
 
   imobileForm : FormGroup;
   imobileList : Imobile[]
+
   constructor(
     public menuService: MenuService,
     public formBuilder: FormBuilder,
