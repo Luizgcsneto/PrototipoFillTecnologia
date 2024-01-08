@@ -1,140 +1,98 @@
 <navbar></navbar>
 <sidebar></sidebar>
 
-
-
 <div class="container-base">
 
+    <div class="content-page">
+        <table *ngIf="imobileList">
+            <tr>
+                <th>Título</th>
+                <th>Bairro</th>
+                <th>Número de dormitórios</th>
+                <th>Tipo de negócio</th>
+                <th>Valor</th>
+            </tr>
 
-  <div class="content-page">
-    <table  *ngIf="imobiles">
-      <tr>
-        <th>Título</th>
-        <th>Bairro</th>
-        <th>Número de dormitórios</th>
-        <th>Tipo de negócio</th>
-        <th>Valor</th>
-        <th>Opções</th>
-      </tr>
+            <tr *ngFor="let item of imobileList">
+                <td>{{item.title}}</td>
+                <td>{{item.district}}</td>
+                <td>{{item.numberRooms}}</td>
+                <td>{{item.businessType}}</td>
+                <td>{{item.price}}</td>
 
-      <tr *ngFor="let item of imobiles">
-        <td>{{item.title}}</td>
-        <td>{{item.district}}</td>
-        <td>{{item.numberRooms}}</td>
-        <td>{{item.businessType}}</td>
-        <td>{{item.price}}</td>
-        <td>
-          <!-- <button type="button" class="btn btn-sm btn-outline-info" (click)="ShowFormUpdate(item.id)">Atualizar</button> |
-          <button type="button" class="btn btn-sm btn-outline-danger" (click)="Delete(item.id)">Excluir</button> -->
-        </td>
-      </tr>
-    </table>
+            </tr>
+        </table>
 
-      <div class="card-header">
-          <div class="card-title">
-            Cadastro de Imóveis
-          </div>
-      </div>
+        <div class="card-header">
+            <div class="card-title">
+                Cadastro de Imóveis
+            </div>
+        </div>
 
-      <form class="form-page" [formGroup]="imobileForm" (submit)="enviar()">
-          <div class="row">
-            <div class="group-row">
-              <label for="">Título</label>
-              <input type="text"
-                name="title"
-                id="title"
-                placeholder="Título"
-                formControlName="title"
-                required>
-                <label class="error-input"
-                *ngIf="this.imobileForm.get('title')?.errors?.['required'] &&
+        <form class="form-page" [formGroup]="imobileForm" (submit)="enviar()">
+            <div class="row">
+                <div class="group-row">
+                    <label for="">Título</label>
+                    <input type="text" name="title" id="title" placeholder="Título" formControlName="title" required>
+                    <label class="error-input" *ngIf="this.imobileForm.get('title')?.errors?.['required'] &&
                 this.imobileForm.get('title')?.touched">
-                  Campo Obrigatório
-                </label>
+                        Campo Obrigatório
+                    </label>
+                </div>
             </div>
-          </div>
-
-          <div class="row">
-            <div class="group-row">
-              <label for="">Bairro</label>
-              <input type="text"
-                name="district"
-                id="district"
-                placeholder="Bairro"
-                formControlName="district"
-                required>
-                <label class="error-input"
-                *ngIf="this.imobileForm.get('district')?.errors?.['required'] &&
-                this.imobileForm.get('district')?.touched">
-                  Campo Obrigatório
-                </label>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="group-row">
-              <label for="">Número de Dormitórios</label>
-              <input type="number"
-                name="numberRooms"
-                id="numberRooms"
-                placeholder="Número de dormitórios"
-                formControlName="numberRooms"
-                required>
-                <label class="error-input"
-                *ngIf="this.imobileForm.get('numberRooms')?.errors?.['required'] &&
-                this.imobileForm.get('numberRooms')?.touched">
-                  Campo Obrigatório
-                </label>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="group-row">
-              <label for="">Tipo de negócio</label>
-              <input type="number"
-                name="businessType"
-                id="businessType"
-                placeholder="Tipo de negócio"
-                formControlName="businessType"
-                required>
-                <label class="error-input"
-                *ngIf="this.imobileForm.get('businessType')?.errors?.['required'] &&
-                this.imobileForm.get('businessType')?.touched">
-                  Campo Obrigatório
-                </label>
-            </div>
-          </div>
-
-
-          <div class="row">
-            <div class="group-row">
-              <label for="">Valor</label>
-              <input type="number"
-                name="price"
-                id="price"
-                placeholder="Valor do negócio"
-                formControlName="price"
-                required>
-                <label class="error-input"
-                *ngIf="this.imobileForm.get('price')?.errors?.['required'] &&
-                this.imobileForm.get('price')?.touched">
-                  Campo Obrigatório
-                </label>
-            </div>
-          </div>
-
 
             <div class="row">
-              <div class="group-row">
+                <div class="group-row">
+                    <label for="">Bairro</label>
+                    <input type="text" name="district" id="district" placeholder="Bairro" formControlName="district" required>
+                    <label class="error-input" *ngIf="this.imobileForm.get('district')?.errors?.['required'] &&
+                this.imobileForm.get('district')?.touched">
+                        Campo Obrigatório
+                    </label>
+                </div>
+            </div>
 
-                <input type="submit" value="Salvar" class="btn-primary">
+            <div class="row">
+                <div class="group-row">
+                    <label for="">Número de Dormitórios</label>
+                    <input type="number" name="numberRooms" id="numberRooms" placeholder="Número de dormitórios" formControlName="numberRooms" required>
+                    <label class="error-input" *ngIf="this.imobileForm.get('numberRooms')?.errors?.['required'] &&
+                this.imobileForm.get('numberRooms')?.touched">
+                        Campo Obrigatório
+                    </label>
+                </div>
+            </div>
 
-              </div>
+            <div class="row">
+                <div class="group-row">
+                    <label for="">Tipo de negócio</label>
+                    <input type="number" name="businessType" id="businessType" placeholder="Tipo de negócio" formControlName="businessType" required>
+                    <label class="error-input" *ngIf="this.imobileForm.get('businessType')?.errors?.['required'] &&
+                this.imobileForm.get('businessType')?.touched">
+                        Campo Obrigatório
+                    </label>
+                </div>
+            </div>
 
-          </div>
-      </form>
-  </div>
+            <div class="row">
+                <div class="group-row">
+                    <label for="">Valor</label>
+                    <input type="number" name="price" id="price" placeholder="Valor do negócio" formControlName="price" required>
+                    <label class="error-input" *ngIf="this.imobileForm.get('price')?.errors?.['required'] &&
+                this.imobileForm.get('price')?.touched">
+                        Campo Obrigatório
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="group-row">
+
+                    <input type="submit" value="Salvar" class="btn-primary">
+
+                </div>
+
+            </div>
+        </form>
+    </div>
 </div>
-
-
-

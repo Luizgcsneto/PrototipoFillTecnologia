@@ -13,7 +13,7 @@ import { MenuService } from 'src/app/services/menu.service';
 export class ImobileComponent implements OnInit {
 
   imobileForm : FormGroup;
-  imobiles : Imobile[]
+  imobileList : Imobile[]
   constructor(
     public menuService: MenuService,
     public formBuilder: FormBuilder,
@@ -35,7 +35,7 @@ export class ImobileComponent implements OnInit {
       })
 
         this.imobileService.GetAllImobiles().subscribe(response => {
-          this.imobiles = response
+          this.imobileList = response
       }),
       (error) => console.error(error), () => {}
   }

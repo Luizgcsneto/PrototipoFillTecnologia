@@ -18,7 +18,6 @@ namespace Api.Domain.Services
             await _interfaceAddress.Add(address);
         }
 
- 
         public async Task<AddressEntity> GetAddressById(int id)
         {
             var result = await _interfaceAddress.GetEntityById(id);

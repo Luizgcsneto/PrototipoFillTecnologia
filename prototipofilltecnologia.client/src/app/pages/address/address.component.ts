@@ -13,7 +13,7 @@ import { MenuService } from 'src/app/services/menu.service';
 export class AddressComponent implements OnInit {
 
   addressForm : FormGroup
-  addresses: Address[]
+  addressList: Address[]
   constructor(public menuService: MenuService,
     public addressService: AddressService,
     public formBuilder: FormBuilder,
@@ -35,7 +35,7 @@ export class AddressComponent implements OnInit {
 
       this.addressService.GetAllAddress().subscribe(
         response =>{
-          this.addresses = response
+          this.addressList = response
         }
       ),
       (error) => console.error(error), () => {}

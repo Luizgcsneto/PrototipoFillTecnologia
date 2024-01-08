@@ -2,76 +2,54 @@
 <sidebar></sidebar>
 
 <div class="container-base">
-  <div class="content-page">
-      <div class="card-header">
-          <div class="card-title">
-            Cadastro de Usuários
-          </div>
-      </div>
-
-      <form class="form-page" [formGroup]="userForm" (submit)="enviar()">
-          <div class="row">
-            <div class="group-row">
-              <label for="">Email</label>
-              <input type="text"
-                name="email"
-                id="email"
-                placeholder="E-mail"
-                formControlName="email"
-                required>
-                <label class="error-input"
-                *ngIf="this.userForm.get('email')?.errors?.['required'] &&
-                this.userForm.get('email')?.touched">
-                  Campo Obrigatório
-                </label>
+    <div class="content-page">
+        <div class="card-header">
+            <div class="card-title">
+                Cadastro de Usuários
             </div>
-          </div>
+        </div>
 
-          <div class="row">
-            <div class="group-row">
-              <label for="">Senha</label>
-              <input type="password"
-                name="password"
-                id="password"
-                placeholder="Senha"
-                formControlName="password"
-                required>
-                <label class="error-input"
-                *ngIf="this.userForm.get('password')?.errors?.['required'] &&
-                this.userForm.get('password')?.touched">
-                  Campo Obrigatório
-                </label>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="group-row">
-              <label for="">CPF:</label>
-              <input type="text"
-                name="cpf"
-                id="cpf"
-                placeholder="Informe o CPF"
-                formControlName="cpf"
-                required>
-                <label class="error-input"
-                *ngIf="this.userForm.get('cpf')?.errors?.['required'] &&
-                this.userForm.get('cpf')?.touched">
-                  Campo Obrigatório
-                </label>
-            </div>
-          </div>
+        <form class="form-page" [formGroup]="userForm" (submit)="enviar()">
             <div class="row">
-              <div class="group-row">
+                <div class="group-row">
+                    <label for="">Email</label>
+                    <input type="text" name="email" id="email" placeholder="E-mail" formControlName="email" required>
+                    <label class="error-input" *ngIf="this.userForm.get('email')?.errors?.['required'] &&
+                this.userForm.get('email')?.touched">
+                        Campo Obrigatório
+                    </label>
+                </div>
+            </div>
 
-                <input type="submit" value="Salvar" class="btn-primary">
+            <div class="row">
+                <div class="group-row">
+                    <label for="">Senha</label>
+                    <input type="password" name="password" id="password" placeholder="Senha" formControlName="password" required>
+                    <label class="error-input" *ngIf="this.userForm.get('password')?.errors?.['required'] &&
+                this.userForm.get('password')?.touched">
+                        Campo Obrigatório
+                    </label>
+                </div>
+            </div>
 
-              </div>
+            <div class="row">
+                <div class="group-row">
+                    <label for="">CPF:</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="Informe o CPF" formControlName="cpf" required>
+                    <label class="error-input" *ngIf="this.userForm.get('cpf')?.errors?.['required'] &&
+                this.userForm.get('cpf')?.touched">
+                        Campo Obrigatório
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="group-row">
 
-          </div>
-      </form>
-  </div>
+                    <input type="submit" value="Salvar" class="btn-primary">
+
+                </div>
+
+            </div>
+        </form>
+    </div>
 </div>
-
-
-
-

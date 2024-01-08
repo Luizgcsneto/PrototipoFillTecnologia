@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
         this.authService.setEmailUser(this.dadosForm["email"].value)
         this.authService.usuarioAutenticado(true)
         alert("Login Realizado com sucesso")
-        this.router.navigate(['/dashboard'])
+        this.router.navigate(['/imobile'])
       },
       err => {
         alert("ocorreu um erro")
