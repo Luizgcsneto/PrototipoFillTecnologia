@@ -26,5 +26,8 @@ Executar os comandos
 "Add-Migration NomeDaMigration"
 "Update-Database"
 
-Agora você deve ir no projeto angular e dar o comando npm i para baixar o node_modules.
+Agora você deve ir no projeto angular 
+e Executar o comando "npm i" para baixar o node_modules.
+após isso os comandos ng build para buildar o front e após o comando ng serve
+vai subir o front na porta "http://localhost:4200/"
 
