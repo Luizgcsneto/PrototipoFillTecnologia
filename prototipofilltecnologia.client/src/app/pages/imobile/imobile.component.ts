@@ -54,6 +54,7 @@ export class ImobileComponent implements OnInit {
     item.district = dados['district'].value
     item.numberRooms = dados['numberRooms'].value
     item.businessType = dados['businessType'].value
+    item.price = dados['price'].value
 
     this.imobileService.CreateImobile(item).subscribe(
       (response: Imobile) =>{
@@ -64,5 +65,10 @@ export class ImobileComponent implements OnInit {
     (error) => console.error(error), () => {}
 
   }
+
+  businessTypeList = [
+    { id: 1, name: 'Aluguel' },
+    { id: 2, name: 'Venda' },
+];
 
 }

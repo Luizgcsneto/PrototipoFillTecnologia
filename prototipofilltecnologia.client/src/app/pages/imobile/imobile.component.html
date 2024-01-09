@@ -4,7 +4,7 @@
 <div class="container-base">
 
     <div class="content-page">
-        <table *ngIf="!imobileList">
+        <table *ngIf="imobileList">
             <tr>
                 <th>Título</th>
                 <th>Bairro</th>
@@ -17,7 +17,7 @@
                 <td>{{item.title}}</td>
                 <td>{{item.district}}</td>
                 <td>{{item.numberRooms}}</td>
-                <td>{{item.businessType}}</td>
+                <td>{{item.businessType == 1 ? "Aluguel": "Venda" }}</td>
                 <td>{{item.price}}</td>
 
             </tr>
@@ -64,15 +64,18 @@
             </div>
 
             <div class="row">
-                <div class="group-row">
-                    <label for="">Tipo de negócio</label>
-                    <input type="number" name="businessType" id="businessType" placeholder="Tipo de negócio" formControlName="businessType" required>
-                    <label class="error-input" *ngIf="this.imobileForm.get('businessType')?.errors?.['required'] &&
-                this.imobileForm.get('businessType')?.touched">
-                        Campo Obrigatório
-                    </label>
-                </div>
-            </div>
+              <div class="group-row">
+                <label for="">Tipo de Negócio</label><br>
+                <input type="number" name="businessType" id="businessType" placeholder="Tipo de Negócio" formControlName="businessType" required list="faixa">
+                <!-- <select formControlName="businessType" name="businessType" id="businessType" placeholder="Selecione" required>
+                  <option *ngFor="let option of businessTypeList" [value]="option.id">{{option.name}}</option>
+               </select> -->
+               <label class="error-input" *ngIf="this.imobileForm.get('businessType')?.errors?.['required'] &&
+               this.imobileForm.get('businessType')?.touched">
+                       Campo Obrigatório
+                   </label>
+              </div>
+          </div>
 
             <div class="row">
                 <div class="group-row">
@@ -83,7 +86,10 @@
                         Campo Obrigatório
                     </label>
                 </div>
+
             </div>
+
+
 
             <div class="row">
                 <div class="group-row">

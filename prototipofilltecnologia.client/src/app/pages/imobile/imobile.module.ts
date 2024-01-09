@@ -5,6 +5,7 @@ import { ImobileRoutingModule } from './imobile-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavbarModule } from 'src/app/components/navbar/navbar.module';
 import { SidebarModule } from 'src/app/components/sidebar/sidebar.module';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule(
@@ -17,7 +18,8 @@ import { SidebarModule } from 'src/app/components/sidebar/sidebar.module';
       ImobileRoutingModule,
       NavbarModule,
       SidebarModule,
-      ReactiveFormsModule
+      ReactiveFormsModule,
+      NgSelectModule
     ]
   }
 )

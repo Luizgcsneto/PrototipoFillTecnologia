@@ -58,12 +58,17 @@ label {
 .container-base {
   padding: 88px 16px 0px 128px;
 
-  .content-page {
-    background: white;
-    padding: 16px;
-    border-radius: 10px;
-    min-height: 800px;
-    min-width: 352px;
+    }
+
+    .content-page {
+      background: white;
+      padding: 16px;
+      border-radius: 10px;
+      min-height: 800px;
+      min-width: 352px;
+
+    }
+
 
     .card-header {
       z-index: 3 !important;
@@ -73,32 +78,29 @@ label {
       box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
       border-radius: 8px;
       margin-bottom: 16px;
-
-      .card-title {
-        color: #fff;
-        padding: 16px;
-        font-size: 16px;
-        font-weight: 500;
-      }
+    }
+    .card-title {
+      color: #fff;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: 500;
     }
 
     .form-page {
       display: grid;
       justify-content: center;
+      }
 
+      .group-row {
+        display: grid;
+      }
       .row {
         display: flex;
         justify-content: center;
         align-items: center;
         padding-bottom: 16px;
-
-        .group-row {
-          display: grid;
-        }
       }
-    }
-  }
-}
+
 
 
 .select-padrao {
