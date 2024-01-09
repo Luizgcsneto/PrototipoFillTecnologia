@@ -19,6 +19,7 @@ no Projeto de Infra.(Deixar todos na versão 7.0.14)
 > Install-Package Microsoft.EntityFrameworkCore.SqlServer  
 > Install-Package Microsoft.EntityFrameworkCore.Tools  
 > Install-Package Microsoft.EntityFrameworkCore.Design
+> Install-Package Microsoft.EntityFrameworkCore
 
 No anquivo ContextBase: colocar na ConnectionStrings o seu servidor e o banco local. como ele não existe vai ser criado com o comando. 
 Lembrar de atualizar a connectionString no projeto de api no arquivo appsettings.json.
