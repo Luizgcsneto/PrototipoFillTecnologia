@@ -47,7 +47,8 @@ export class UserComponent implements OnInit {
     this.userService.CreateUser(item).subscribe(
       (response: User) =>{
         this.userForm.reset()
-        window.location.reload()
+        alert("Cadastro realizado com sucesso")
+        this.router.navigate(['/login'])
       }
     ),
     (error) => console.error(error), () => {}
